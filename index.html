@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input type="text" id="Nombre" placeholder="Escribe tu nombre"></input>
+    <button id="Saludar">Enviar</button>
+    <p id="mensaje"></p>
+    <script>
+        let boton = document.getElementById("Saludar");
+        function saludar(){
+            let nombre = document.getElementById("Nombre").value;
+            let mensaje = document.getElementById("mensaje");
+            mensaje.textContent = "Hola " + nombre + ", como estas maquina?";
+        }
+        boton.addEventListener("click", saludar);
+    </script>
+
+    <button id="btnrojo">boton rojo</button>
+    <button id="btnverde">boton verde</button>
+    <button id="btnazul">boton azul</button>
+
+    <script>
+        function cambiararojo(){
+            document.body.style.backgroundColor = "red";
+        }
+        function cambiaraverde(){
+            document.body.style.backgroundColor = "green";
+        }
+        function cambiarazul(){
+            document.body.style.backgroundColor = "blue";
+        }
+
+        let botonrojo = document.getElementById("btnrojo");
+        let botonverde = document.getElementById("btnverde");  
+        let botonazul = document.getElementById("btnazul");
+
+        botonrojo.addEventListener("click", cambiararojo);
+        botonverde.addEventListener("click", cambiaraverde);
+        botonazul.addEventListener("click", cambiarazul);
+    </script>
+</body>
+</html>
